@@ -4,9 +4,48 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="../../css/bootstrap.css" />
     <link rel="stylesheet" href="../../css/admin.css" />
+
+   
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h4>Options</h4>
+                <form id="alert-form">
+                    <div class="form-group">
+                        <select id="alert-type-input" class="form-control">
+                            <option value="success">Success</option>
+                            <option value="warning">Warning</option>
+                            <option value="info">Info</option>
+                            <option value="danger">Danger</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input id="is-dismissable-input" type="checkbox" checked> Dismissable?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Insert Alert Shortcode</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-6">
+                <h4>Preview</h4>
+                <div id="alert-demo"></div>
+                    <button id="reset-button" class="btn btn-warning">Oops, I guess I needed that</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="../jquery.js"></script>
     <script type="text/javascript" src="../bootstrap.js"></script>
-    <script type="text/javascript">
+    
+     <script type="text/javascript">
     $(document).ready(function() {
         function alertType() {
           return $('#alert-type-input').val();
@@ -51,41 +90,6 @@
         resetPreview();
     });
     </script>
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6">
-                <h4>Options</h4>
-                <form id="alert-form">
-                    <div class="form-group">
-                        <select id="alert-type-input" class="form-control">
-                            <option value="success">Success</option>
-                            <option value="warning">Warning</option>
-                            <option value="info">Info</option>
-                            <option value="danger">Danger</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input id="is-dismissable-input" type="checkbox" checked> Dismissable?
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Insert Alert Shortcode</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-xs-6">
-                <h4>Preview</h4>
-                <div id="alert-demo"></div>
-                    <button id="reset-button" class="btn btn-warning">Oops, I guess I needed that</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </body>
 </html>
